@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Beta>True</Beta>
+  <Name>Verlihub</Name>
+  <Description>
+    Verlihub is a NMDC hub server that runs on all operating systems. It is written in C++ and has many rich plugins including Lua, Python and Perl.
+  </Description>
+  <Overview>
+    Verlihub is a NMDC hub server that runs on all operating systems. It is written in C++ and has many rich plugins including Lua, Python and Perl.
+  </Overview>
+  <Support></Support>
+  <Registry>https://hub.docker.com/r/combro2k/verlihub/</Registry>
+  <GitHub>https://github.com/combro2k/docker-verlihub</GitHub>
+  <Repository>combro2k/verlihub</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>4111</HostPort>
+        <ContainerPort>4111</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/AppData/verlihub</HostDir>
+      <ContainerDir>/etc/verlihub</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <ExtraParams>--link mariadb:mariadb</ExtraParams>
+</Container>
