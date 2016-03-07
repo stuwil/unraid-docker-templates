@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container>
   <Beta>True</Beta>
-  <Name>adchpp</Name>
+  <Name>ADCH++</Name>
   <Description>
     ADCH++ is a hub software for the ADC network. It implements the ADC protocol.
   </Description>
