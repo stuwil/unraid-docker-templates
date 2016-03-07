@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Beta>True</Beta>
+  <Name>adchpp</Name>
+  <Description>
+    ADCH++ is a hub software for the ADC network. It implements the ADC protocol.
+  </Description>
+  <Overview>
+    ADCH++ is a hub software for the ADC network. It implements the ADC protocol. 
+  </Overview>
+  <Support></Support>
+  <Registry>https://hub.docker.com/r/combro2k/adchpp</Registry>
+  <GitHub>https://github.com/combro2k/docker-adchpp</GitHub>
+  <Repository>combro2k/adchpp</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>411</HostPort>
+        <ContainerPort>2780</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/AppData/adchpp</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+</Container>
