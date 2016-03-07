@@ -32,4 +32,5 @@
     </Volume>
   </Data>
   <ExtraParams>--link mariadb:mariadb</ExtraParams>
+  <Icon>http://verlihub.net/logo.png</Icon>
 </Container>

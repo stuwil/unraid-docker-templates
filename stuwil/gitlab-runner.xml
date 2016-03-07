@@ -30,4 +30,5 @@
     </Volume>
   </Data>
   <ExtraParams>--restart always</ExtraParams>
+  <Icon>https://gitlab.com/gitlab-com/gitlab-artwork/raw/master/logo/logo.png</Icon>
 </Container>
