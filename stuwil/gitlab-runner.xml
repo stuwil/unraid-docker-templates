@@ -23,6 +23,11 @@
       <ContainerDir>/etc/gitlab-runner</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
+    <Volume>
+      <HostDir>/var/run/docker.sock</HostDir>
+      <ContainerDir>/var/run/docker.sock</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
   </Data>
   <ExtraParams>--restart always</ExtraParams>
 </Container>
