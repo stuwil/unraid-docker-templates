@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Beta>True</Beta>
+  <Name>gitlab-ci-multi-runner-ruby</Name>
+  <Description>
+    Docker image with gitlab-ci-multi-runner, which can run ruby builds. It uses rbenv to manage ruby versions.
+  </Description>
+  <Overview>
+    Docker image with gitlab-ci-multi-runner, which can run ruby builds. It uses rbenv to manage ruby versions.
+  </Overview>
+  <Support></Support>
+  <Registry>https://hub.docker.com/r/outcoldman/gitlab-ci-multi-runner-ruby</Registry>
+  <GitHub>https://github.com/outcoldman/docker-gitlab-ci-multi-runner-ruby</GitHub>
+  <Repository>outcoldman/gitlab-ci-multi-runner-ruby</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>CI_SERVER_URL</Name>
+      <Value></Value>
+    </Variable>
+    <Variable>
+      <Name>RUNNER_TOKEN</Name>
+      <Value></Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/AppData/gitlab-ci-multi-runner-ruby</HostDir>
+      <ContainerDir>/home/gitlab_ci_multi_runner/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <ExtraParams>--restart=always</ExtraParams>
+  <Icon>https://gitlab.com/gitlab-com/gitlab-artwork/raw/master/logo/logo.png</Icon>
+</Container>
