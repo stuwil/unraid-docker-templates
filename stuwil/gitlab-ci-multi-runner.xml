@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Beta>True</Beta>
+  <Name>gitlab-ci-multi-runner</Name>
+  <Description>
+    GitLab CI is the open-source continuous integration service included with GitLab that coordinates the testing. GitLab Runner uns tests and sends the results to GitLab.
+  </Description>
+  <Overview>
+    GitLab CI is the open-source continuous integration service included with GitLab that coordinates the testing. GitLab Runner uns tests and sends the results to GitLab.
+  </Overview>
+  <Support></Support>
+  <Registry>https://hub.docker.com/r/sameersbn/gitlab-ci-multi-runner</Registry>
+  <GitHub>https://github.com/sameersbn/docker-gitlab-ci-multi-runner</GitHub>
+  <Repository>sameersbn/gitlab-ci-multi-runner</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>CI_SERVER_URL</Name>
+      <Value></Value>
+    </Variable>
+    <Variable>
+      <Name>RUNNER_TOKEN</Name>
+      <Value></Value>
+    </Variable>
+    <Variable>
+      <Name>RUNNER_DESCRIPTION</Name>
+      <Value>Runner</Value>
+    </Variable>
+    <Variable>
+      <Name>RUNNER_EXECUTOR</Name>
+      <Value>shell</Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/AppData/gitlab-ci-multi-runner</HostDir>
+      <ContainerDir>/home/gitlab_ci_multi_runner/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <ExtraParams>--restart=always</ExtraParams>
+  <Icon>https://gitlab.com/gitlab-com/gitlab-artwork/raw/master/logo/logo.png</Icon>
+</Container>
