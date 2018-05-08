@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Beta>True</Beta>
+  <Name>haproxy</Name>
+  <Description>
+    The Reliable, High Performance TCP/HTTP Load Balancer.
+  </Description>
+  <Overview>
+    The Reliable, High Performance TCP/HTTP Load Balancer.
+  </Overview>
+  <Support></Support>
+  <Registry>https://hub.docker.com/_/haproxy</Registry>
+  <GitHub>https://github.com/haproxy/haproxy</GitHub>
+  <Repository>library/haproxy</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8443</HostPort>
+        <ContainerPort>443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/AppData/haproxy</HostDir>
+      <ContainerDir>/usr/local/etc/haproxy</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Icon>http://www.haproxy.org/img/HAProxyCommunityEdition_60px.png</Icon>
+</Container>
